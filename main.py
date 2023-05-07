@@ -46,3 +46,16 @@ class ProCard(Wallet):
             print(f"Not enough balanse {self.balanse}")
         else:
             self.balanse += value * 0.95 if self.balanse + value * 0.95 < self.balanse else value
+      
+card = Card("Sam")
+print(card.get_balance())
+card.change_balance(1000)
+print(card.get_balance())
+card.change_balance(-800)
+print(card.get_balance())
+card.change_balance(-300)
+print(card.get_balance())
+card = card.change_type()
+print(card.type)
+card.change_balance(-100)
+print(card.get_balance())    
